@@ -63,6 +63,9 @@ class SPath(Path):
         def __new__(cls, *args: SPathLike, **kwargs: Any) -> SPath:
             ...
 
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__()  # Initialize the base class
+
     def format(self, *args: Any, **kwargs: Any) -> SPath:
         """Format the path with the given arguments."""
 
