@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 import vapoursynth as vs
-from stgpytools import CustomPermissionError, CustomValueError, FuncExceptT, SupportsString
+from vstools.stgpytools import CustomPermissionError, CustomValueError, FuncExceptT, SupportsString
 
 __all__ = [
     'InvalidColorspacePathError',

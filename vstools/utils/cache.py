@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Generic, TypeVar
 
-from stgpytools import T
+from vstools.stgpytools import T
 
 from ..functions import Keyframes
 from ..types import vs_object

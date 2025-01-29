@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from stgpytools import CustomValueError, NotFoundEnumValue
+from vstools.stgpytools import CustomValueError, NotFoundEnumValue
 
 __all__ = [
     'UndefinedChromaLocationError',

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from stgpytools import (
+from vstools.stgpytools import (
     FileIsADirectoryError, FileNotExistsError, FilePermissionError, FileTypeMismatchError, FileWasNotFoundError
 )
 

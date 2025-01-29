@@ -5,7 +5,7 @@ from typing import Any, Iterable, Literal, Mapping, Sequence, overload
 from weakref import WeakValueDictionary
 
 import vapoursynth as vs
-from stgpytools import CustomIndexError, CustomStrEnum, CustomValueError
+from vstools.stgpytools import CustomIndexError, CustomStrEnum, CustomValueError
 
 from ..enums import ColorRange, ColorRangeT, Matrix
 from ..exceptions import ClipLengthError, InvalidColorFamilyError

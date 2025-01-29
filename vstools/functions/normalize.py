@@ -3,8 +3,8 @@ from __future__ import annotations
 from typing import Any, Iterable, Sequence, overload
 
 import vapoursynth as vs
-from stgpytools import T, norm_display_name, norm_func_name, normalize_list_to_ranges, to_arr
-from stgpytools import (
+from vstools.stgpytools import T, norm_display_name, norm_func_name, normalize_list_to_ranges, to_arr
+from vstools.stgpytools import (
     flatten as stg_flatten,
     invert_ranges as stg_invert_ranges,
     normalize_range as normalize_franges,

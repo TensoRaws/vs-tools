@@ -6,7 +6,7 @@ from types import TracebackType
 from typing import Any, Callable, Iterable, Sequence, TypeVar, overload
 
 import vapoursynth as vs
-from stgpytools import MISSING
+from vstools.stgpytools import MISSING
 
 from ..enums import Align, BaseAlign
 from ..exceptions import InvalidSubsamplingError

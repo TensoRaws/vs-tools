@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Sequence
 
-from stgpytools import copy_func, erase_module as stg_erase_module, F
+from vstools.stgpytools import copy_func, erase_module as stg_erase_module, F
 
 __all__ = [
     'copy_func',

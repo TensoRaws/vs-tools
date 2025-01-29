@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from stgpytools import (
+from vstools.stgpytools import (
     FileDescriptor, FileOpener, FilePathType, OpenBinaryMode, OpenBinaryModeReading, OpenBinaryModeUpdating,
     OpenBinaryModeWriting, OpenTextMode, OpenTextModeReading, OpenTextModeUpdating, OpenTextModeWriting, SPath,
     SPathLike

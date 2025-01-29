@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any, Callable, TypeVar, overload
 
 import vapoursynth as vs
-from stgpytools import MISSING, FileWasNotFoundError, FuncExceptT, MissingT, SPath, SPathLike, SupportsString
+from vstools.stgpytools import MISSING, FileWasNotFoundError, FuncExceptT, MissingT, SPath, SPathLike, SupportsString
 
 from ..enums import PropEnum
 from ..exceptions import FramePropError
