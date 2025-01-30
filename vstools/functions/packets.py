@@ -6,7 +6,7 @@ import shutil
 import warnings
 from subprocess import PIPE, Popen
 from tempfile import NamedTemporaryFile
-from typing import Self, TypedDict
+from typing import TypedDict, Optional
 
 import vapoursynth as vs
 from vstools.stgpytools import CustomValueError, DependencyNotFoundError, FuncExceptT, SPath, SPathLike
@@ -48,7 +48,7 @@ class VideoPackets(list[int]):
     def from_video(
         cls, src_file: SPathLike, out_file: SPathLike | None = None,
         offset: int = 0, *, func: FuncExceptT | None = None
-    ) -> Self:
+    ) -> "VideoPackets":
         """
         Obtain packet sizes from a video file.
 
@@ -128,7 +128,7 @@ class VideoPackets(list[int]):
         return cls(pkt_sizes)
 
     @classmethod
-    def from_file(cls, file: SPathLike, *, func: FuncExceptT | None = None) -> Self | None:
+    def from_file(cls, file: SPathLike, *, func: FuncExceptT | None = None) -> Optional["VideoPackets"]:
         """
         Obtain packet sizes from a given file.
 
@@ -156,7 +156,7 @@ class VideoPackets(list[int]):
         cls, clip: vs.VideoNode,
         out_file: SPathLike, src_file: SPathLike | None = None,
         offset: int = 0, *, func: FuncExceptT | None = None
-    ) -> Self:
+    ) -> "VideoPackets":
         """
         Obtain packet sizes from a given clip.
 
