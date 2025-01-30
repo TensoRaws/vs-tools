@@ -66,4 +66,3 @@ jobs:
 
       - name: Running tests
         run: pytest --cov-report=term-missing:skip-covered --cov=vstools tests
-        continue-on-error: true
