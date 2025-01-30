@@ -61,7 +61,11 @@ class SPath(Path):
 
     if TYPE_CHECKING:
         def __new__(cls, *args: SPathLike, **kwargs: Any) -> SPath:
-            ...
+            pass
+
+    else:
+        def __new__(cls, *args: SPathLike, **kwargs: Any) -> Any:
+            return super().__new__(cls, *args, **kwargs)
 
     def format(self, *args: Any, **kwargs: Any) -> SPath:
         """Format the path with the given arguments."""
