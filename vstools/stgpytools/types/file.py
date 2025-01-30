@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import fnmatch
+import os
 import shutil
+import sys
 from os import PathLike, listdir, path, walk
 from pathlib import Path
+from pathlib import PureWindowsPath, PurePosixPath
 from typing import TYPE_CHECKING, Any, Callable, Iterable, Literal, TypeAlias, Union
 
 __all__ = [
@@ -59,13 +62,12 @@ OpenBinaryMode: TypeAlias = OpenBinaryModeUpdating | OpenBinaryModeReading | Ope
 class SPath(Path):
     """Modified version of pathlib.Path"""
 
+    if sys.version_info[0] == 3 and sys.version_info[1] < 12:
+        _flavour = PurePosixPath._flavour if os.name == 'posix' else PureWindowsPath._flavour # type:ignore # noqa
+
     if TYPE_CHECKING:
         def __new__(cls, *args: SPathLike, **kwargs: Any) -> SPath:
             pass
-
-    else:
-        def __new__(cls, *args: SPathLike, **kwargs: Any) -> Any:
-            return super().__new__(cls, *args, **kwargs)
 
     def format(self, *args: Any, **kwargs: Any) -> SPath:
         """Format the path with the given arguments."""
